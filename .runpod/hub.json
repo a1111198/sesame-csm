@@ -3,6 +3,7 @@
   "description": "Conversational Speech Model (CSM) - generates natural speech from text using Sesame AI's 1B parameter model",
   "type": "serverless",
   "category": "audio",
+  "handler": "handler.py",
   "config": {
     "runsOn": "GPU",
     "containerDiskInGb": 40,
