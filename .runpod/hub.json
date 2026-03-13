@@ -1,0 +1,25 @@
+{
+  "title": "Sesame CSM-1B",
+  "description": "Conversational Speech Model (CSM) - generates natural speech from text using Sesame AI's 1B parameter model",
+  "type": "serverless",
+  "category": "audio",
+  "config": {
+    "runsOn": "GPU",
+    "containerDiskInGb": 40,
+    "env": [
+      {
+        "key": "NO_TORCH_COMPILE",
+        "value": "1"
+      },
+      {
+        "key": "HF_TOKEN",
+        "input": {
+          "name": "Hugging Face Token",
+          "type": "secret",
+          "description": "Your Hugging Face access token (needs access to meta-llama/Llama-3.2-1B and sesame/csm-1b)",
+          "required": true
+        }
+      }
+    ]
+  }
+}

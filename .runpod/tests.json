@@ -1,0 +1,31 @@
+{
+  "tests": [
+    {
+      "name": "basic_text_to_speech",
+      "input": {
+        "text": "Hello, this is a test of the Sesame speech model.",
+        "speaker": 0,
+        "max_audio_length_ms": 5000
+      },
+      "timeout": 120000
+    }
+  ],
+  "config": {
+    "gpuTypeId": "NVIDIA RTX A4000",
+    "gpuCount": 1,
+    "env": [
+      {
+        "key": "NO_TORCH_COMPILE",
+        "value": "1"
+      },
+      {
+        "key": "HF_TOKEN",
+        "value": "YOUR_HF_TOKEN_HERE"
+      }
+    ],
+    "allowedCudaVersions": [
+      "12.6",
+      "12.4"
+    ]
+  }
+}
